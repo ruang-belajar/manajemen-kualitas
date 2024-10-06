@@ -1,0 +1,12 @@
+title: Ruang Belajar - Manajemen Kualitas
+description: Repositori pembelajaran mata kuliah Manajemen Kualitas
+image: images/cover.jpg
+domain: ruang-belajar.github.io
+url: http://ruang-belajar.github.io/manajemen-kualitas
+github_username:  pujangga123
+
+remote_theme: pages-themes/modernist
+plugins:
+- jekyll-remote-theme
+- jekyll-feed1
+- jekyll-seo-tag

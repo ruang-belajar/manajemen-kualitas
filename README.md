@@ -1,2 +1,5 @@
-# manajemen-kualitas
-Repositori materi kuliah Manajemen Kualitas
+# Repositori: Manajemen Kualitas
+
+Berikut adalah repositori materi Manajemen Kualitas untuk perkuliahan di STMIK Mardira Indonesia.
+
+Disusun oleh 👨‍🏫 En Tay.
