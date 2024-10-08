@@ -1,0 +1,54 @@
+# Konsep Dasar dan Pendahuluan
+Pembahasan bab ini diambil dari bab 1 dari buku [Software Testing and Quality Assurance](https://drive.google.com/file/d/1UBdGl16MTPAFDFITc5Os8M84x9qIf3mI/view?usp=sharing)
+
+## 1.1 Latar Belakang
+* Lean Thingking
+
+## 1.2 Software Quality
+Pertanyaan “Apa itu kualitas perangkat lunak?” memunculkan banyak jawaban yang berbeda. Kualitas adalah konsep yang kompleks—artinya berbeda bagi orang yang berbeda, dan sangat bergantung pada konteks. Kualitas perangkat lunak bisa dipersepsikan dengan cara yang berbeda dalam domain yang berbeda, seperti filsafat, ekonomi, pemasaran, dan manajemen. 
+
+Ada lima sudut pandang bagaimana kita melihat kualitas:
+
+1. **Trancendental View**: Pandangan ini memandang kualitas sebagai sesuatu yang dapat dikenali tetapi sulit didefinisikan. Pandangan transendental tidak hanya terbatas pada kualitas perangkat lunak saja, tetapi telah diterapkan di berbagai bidang kehidupan sehari-hari yang kompleks. Misalnya, pada tahun 1964, Hakim Potter Stewart dari Mahkamah Agung AS, saat memutuskan kasus Jacobellis v. Ohio, 378 U.S. 184 (1964), yang melibatkan negara bagian Ohio yang melarang film Prancis Les Amants (“The Lovers”) atas dasar pornografi, menulis, “Saya tidak akan mencoba lagi untuk mendefinisikan jenis materi yang saya pahami termasuk dalam deskripsi singkat itu; dan mungkin saya tidak akan pernah berhasil melakukannya dengan jelas. Namun, saya mengetahuinya saat saya melihatnya, dan film yang terlibat dalam kasus ini bukanlah itu” (penekanan ditambahkan).
+2. **User View**: Pandangan ini memandang kualitas sebagai kesesuaian dengan tujuan. Menurut pandangan ini, saat mengevaluasi kualitas suatu produk, seseorang harus mengajukan pertanyaan kunci: “Apakah produk tersebut memenuhi kebutuhan dan harapan pengguna?”
+3. **Manufacturing View**: Di sini kualitas dipahami sebagai kesesuaian dengan spesifikasi. Tingkat kualitas suatu produk ditentukan oleh sejauh mana produk tersebut memenuhi spesifikasinya.
+4. **Produk View**: Dalam hal ini, kualitas dipandang terkait dengan karakteristik bawaan produk. Karakteristik bawaan suatu produk, yaitu kualitas internal, menentukan kualitas eksternalnya.
+5. **Value-Based View**: Kualitas, dalam perspektif ini, bergantung pada jumlah yang bersedia dibayarkan pelanggan untuk produk tersebut.
+
+## 1.3 Peran Pengujian
+Pengujian memainkan peran penting dalam mencapai dan menilai kualitas produk perangkat lunak. Di satu sisi, kita meningkatkan kualitas produk saat kita mengulang siklus pengujian–menemukan cacat–memperbaiki selama pengembangan. Di sisi lain, kita menilai seberapa baik sistem kita saat kita melakukan pengujian tingkat sistem sebelum merilis produk.
+
+Dengan demikian, pengujian perangkat lunak adalah proses verifikasi untuk penilaian dan peningkatan kualitas perangkat lunak. Secara umum, aktivitas untuk penilaian kualitas perangkat lunak dapat dibagi menjadi dua kategori besar, yaitu analisis statis dan analisis dinamis.
+
+* Analisis Statis: Seperti yang tersirat dari istilah “statis”, analisis ini didasarkan pada pemeriksaan sejumlah dokumen, yaitu dokumen persyaratan, model perangkat lunak, dokumen desain, dan kode sumber. Analisis statis tradisional mencakup tinjauan kode, inspeksi, penelusuran, analisis algoritme, dan pembuktian kebenaran. Analisis ini tidak melibatkan eksekusi aktual kode yang sedang dikembangkan. Sebaliknya, analisis ini memeriksa kode dan alasan atas semua kemungkinan perilaku yang mungkin muncul selama waktu proses. Optimasi kompiler adalah analisis statis standar.
+
+* Analisis Dinamis: Analisis dinamis sistem perangkat lunak melibatkan eksekusi program aktual untuk mengungkap kemungkinan kegagalan program. Properti perilaku dan kinerja program juga diamati. Program dieksekusi dengan nilai masukan yang umum dan dipilih dengan cermat. Sering kali, set masukan suatu program bisa sangat besar dan tidak praktis. Namun, untuk pertimbangan praktis, subset terbatas dari set masukan dapat dipilih. Oleh karena itu, dalam pengujian, kita mengamati beberapa perilaku program yang representatif dan mencapai kesimpulan tentang kualitas sistem. Pemilihan set pengujian terbatas yang cermat sangat penting untuk mencapai kesimpulan yang andal.
+
+Dengan melakukan analisis statis dan dinamis, praktisi ingin mengidentifikasi sebanyak mungkin kesalahan sehingga kesalahan tersebut diperbaiki pada tahap awal pengembangan perangkat lunak. Analisis statis dan analisis dinamis bersifat saling melengkapi, dan untuk efektivitas yang lebih baik, keduanya harus dilakukan berulang kali dan bergantian. Praktisi dan peneliti perlu menghilangkan batasan antara analisis statis dan dinamis dan membuat analisis hibrida yang menggabungkan kekuatan kedua pendekatan tersebut.
+
+## 1.4 Verifikasi dan Validasi
+Dua konsep serupa yang terkait dengan pengujian perangkat lunak yang sering digunakan oleh praktisi adalah verifikasi dan validasi. Kedua konsep tersebut bersifat abstrak, dan masing-masing dapat diwujudkan melalui serangkaian aktivitas konkret yang dapat dieksekusi. Kedua konsep tersebut dijelaskan sebagai berikut:
+*   Verifikasi: Aktivitas semacam ini membantu kita mengevaluasi sistem perangkat lunak
+dengan menentukan apakah produk dari fase pengembangan tertentu memenuhi
+persyaratan yang ditetapkan sebelum dimulainya fase tersebut. Perlu dicatat bahwa suatu produk dapat berupa produk antara, seperti spesifikasi persyaratan, spesifikasi desain, kode, buku petunjuk pengguna, atau bahkan produk akhir. Aktivitas yang memeriksa kebenaran fase pengembangan disebut
+aktivitas verifikasi.
+*   Validasi: Aktivitas semacam ini membantu kita mengonfirmasi bahwa suatu produk memenuhi tujuan penggunaannya. Aktivitas validasi bertujuan untuk mengonfirmasi bahwa suatu produk memenuhi harapan pelanggannya. Dengan kata lain, aktivitas validasi berfokus pada produk akhir, yang diuji secara ekstensif dari sudut pandang pelanggan. Validasi menetapkan apakah produk tersebut memenuhi harapan keseluruhan pengguna.
+
+    Pelaksanaan kegiatan validasi yang terlambat sering kali berisiko karena menyebabkan biaya pengembangan yang lebih tinggi. Kegiatan validasi dapat dilaksanakan pada tahap awal siklus pengembangan perangkat lunak. Contoh pelaksanaan kegiatan validasi yang lebih awal dapat ditemukan dalam metodologi pengembangan perangkat lunak eXtreme Programming (XP). Dalam metodologi XP, pelanggan berinteraksi erat dengan kelompok pengembangan perangkat lunak dan melakukan uji penerimaan selama setiap iterasi pengembangan.
+
+Proses verifikasi menetapkan korespondensi fase implementasi dari proses pengembangan perangkat lunak dengan spesifikasinya, sedangkan validasi menetapkan korespondensi antara sistem dan harapan pengguna. Seseorang dapat membandingkan verifikasi dan validasi sebagai berikut: 
+*   Aktivitas verifikasi bertujuan untuk mengonfirmasi bahwa seseorang membangun produk dengan benar, sedangkan aktivitas validasi bertujuan untuk mengonfirmasi bahwa seseorang membangun produk yang benar. 
+*   Aktivitas verifikasi meninjau produk kerja sementara, seperti spesifikasi persyaratan, desain, kode, dan buku petunjuk pengguna, selama siklus hidup proyek untuk memastikan kualitasnya. Atribut kualitas yang dicari oleh aktivitas verifikasi adalah konsistensi, kelengkapan, dan kebenaran pada setiap tahap utama pengembangan sistem. Di sisi lain, validasi dilakukan menjelang akhir pengembangan sistem untuk menentukan apakah seluruh sistem memenuhi kebutuhan dan harapan pelanggan.
+*   Aktivitas verifikasi dilakukan pada produk sementara dengan menerapkan sebagian besar teknik analisis statis, seperti inspeksi, penelusuran, dan tinjauan, serta menggunakan standar dan daftar periksa. Verifikasi juga dapat mencakup analisis dinamis, seperti pelaksanaan program aktual. Di sisi lain, validasi dilakukan pada keseluruhan sistem dengan menjalankan sistem di lingkungan sebenarnya dan menggunakan berbagai pengujian.
+
+## 1.5 Failure, Error, Fault dan Defect
+Dalam literatur tentang pengujian perangkat lunak, seseorang dapat menemukan referensi tentang istilah Failure (kegagalan), error, fault (kesalahan), dan defect (cacat). Meskipun maknanya saling terkait, ada perbedaan penting antara keempat konsep ini.
+* Failure: Kegagalan dikatakan terjadi setiap kali perilaku eksternal suatu sistem tidak sesuai dengan yang ditentukan dalam spesifikasi sistem.
+* Error: Kesalahan adalah keadaan sistem. Jika tidak ada tindakan korektif oleh sistem, keadaan kesalahan dapat menyebabkan kegagalan yang tidak akan dikaitkan dengan peristiwa apa pun setelah kesalahan.
+* Fault: Kesalahan adalah penyebab kesalahan yang dinilai.
+
+Kesalahn (fault) mungkin tidak terdeteksi dalam waktu lama, hingga suatu kejadian mengaktifkannya. Ketika suatu kejadian mengaktifkan kesalahan, pertama-tama ia membawa program ke dalam status kesalahan antara. Jika komputasi dibiarkan berlanjut dari status kesalahan tanpa tindakan korektif, program tersebut akhirnya menyebabkan kegagalan (failure). Sebagai tambahan, dalam komputasi yang toleran terhadap kesalahan, tindakan korektif dapat diambil untuk mengeluarkan program dari status kesalahan ke status yang diinginkan sehingga komputasi berikutnya tidak akhirnya menyebabkan kegagalan. Oleh karena itu, proses manifestasi kegagalan dapat secara ringkas direpresentasikan sebagai rantai perilaku sebagai berikut: fault → error → failure. Rantai perilaku tersebut dapat berulang untuk sementara waktu, yaitu, kegagalan satu komponen dapat menyebabkan kegagalan komponen lain yang berinteraksi.
+
+Definisi kegagalan di atas mengasumsikan bahwa spesifikasi yang diberikan dapat diterima oleh pelanggan. Namun, jika spesifikasi tersebut tidak memenuhi harapan pelanggan, maka, tentu saja, bahkan implementasi yang bebas kesalahan pun gagal memuaskan pelanggan. Merupakan tugas yang sulit untuk memberikan definisi yang tepat tentang kesalahan, error, atau kegagalan perangkat lunak, karena "faktor manusia" yang terlibat dalam penerimaan keseluruhan suatu sistem. Dalam bisnis perangkat lunak modern, kegagalan perangkat lunak berarti "harapan pelanggan tidak terpenuhi dan/atau pelanggan tidak dapat melakukan pekerjaan yang bermanfaat dengan produk".
+
+Ada perbedaan tipis antara cacat dan kesalahan dalam contoh di atas, yaitu, pelaksanaan kebijakan yang cacat dapat menyebabkan promosi yang salah. Dalam konteks perangkat lunak, sistem perangkat lunak mungkin cacat karena masalah desain; status sistem tertentu akan memperlihatkan cacat, yang mengakibatkan perkembangan kesalahan yang didefinisikan sebagai nilai sinyal atau keputusan yang salah dalam sistem. Dalam industri, istilah cacat digunakan secara luas, sedangkan di kalangan peneliti istilah kesalahan lebih umum. Untuk semua tujuan praktis, kedua istilah tersebut adalah sinonim. Dalam buku ini, kami menggunakan kedua istilah tersebut secara bergantian sebagaimana diperlukan.
