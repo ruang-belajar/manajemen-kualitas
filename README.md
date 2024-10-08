@@ -1,4 +1,4 @@
-# Repositori: Manajemen Kualitas
+# Repositori: Manajemen Kualitas (SI)
 
 Berikut adalah repositori materi Manajemen Kualitas untuk perkuliahan di STMIK Mardira Indonesia.
 
