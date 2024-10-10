@@ -7,7 +7,7 @@ Pembahasan bab ini diambil dari bab 1 dari buku [Software Testing and Quality As
 ## 1.2 Software Quality
 Pertanyaan “Apa itu kualitas perangkat lunak?” memunculkan banyak jawaban yang berbeda. Kualitas adalah konsep yang kompleks—artinya berbeda bagi orang yang berbeda, dan sangat bergantung pada konteks. Kualitas perangkat lunak bisa dipersepsikan dengan cara yang berbeda dalam domain yang berbeda, seperti filsafat, ekonomi, pemasaran, dan manajemen. 
 
-Ada lima sudut pandang bagaimana kita melihat kualitas:
+Ada lima sudut pandang dalam kita melihat kualitas:
 
 1. **Trancendental View**: Pandangan ini memandang kualitas sebagai sesuatu yang dapat dikenali tetapi sulit didefinisikan. Pandangan transendental tidak hanya terbatas pada kualitas perangkat lunak saja, tetapi telah diterapkan di berbagai bidang kehidupan sehari-hari yang kompleks. Misalnya, pada tahun 1964, Hakim Potter Stewart dari Mahkamah Agung AS, saat memutuskan kasus Jacobellis v. Ohio, 378 U.S. 184 (1964), yang melibatkan negara bagian Ohio yang melarang film Prancis Les Amants (“The Lovers”) atas dasar pornografi, menulis, “Saya tidak akan mencoba lagi untuk mendefinisikan jenis materi yang saya pahami termasuk dalam deskripsi singkat itu; dan mungkin saya tidak akan pernah berhasil melakukannya dengan jelas. Namun, saya mengetahuinya saat saya melihatnya, dan film yang terlibat dalam kasus ini bukanlah itu” (penekanan ditambahkan).
 2. **User View**: Pandangan ini memandang kualitas sebagai kesesuaian dengan tujuan. Menurut pandangan ini, saat mengevaluasi kualitas suatu produk, seseorang harus mengajukan pertanyaan kunci: “Apakah produk tersebut memenuhi kebutuhan dan harapan pengguna?”
@@ -52,3 +52,40 @@ Kesalahn (fault) mungkin tidak terdeteksi dalam waktu lama, hingga suatu kejadia
 Definisi kegagalan di atas mengasumsikan bahwa spesifikasi yang diberikan dapat diterima oleh pelanggan. Namun, jika spesifikasi tersebut tidak memenuhi harapan pelanggan, maka, tentu saja, bahkan implementasi yang bebas kesalahan pun gagal memuaskan pelanggan. Merupakan tugas yang sulit untuk memberikan definisi yang tepat tentang kesalahan, error, atau kegagalan perangkat lunak, karena "faktor manusia" yang terlibat dalam penerimaan keseluruhan suatu sistem. Dalam bisnis perangkat lunak modern, kegagalan perangkat lunak berarti "harapan pelanggan tidak terpenuhi dan/atau pelanggan tidak dapat melakukan pekerjaan yang bermanfaat dengan produk".
 
 Ada perbedaan tipis antara cacat dan kesalahan dalam contoh di atas, yaitu, pelaksanaan kebijakan yang cacat dapat menyebabkan promosi yang salah. Dalam konteks perangkat lunak, sistem perangkat lunak mungkin cacat karena masalah desain; status sistem tertentu akan memperlihatkan cacat, yang mengakibatkan perkembangan kesalahan yang didefinisikan sebagai nilai sinyal atau keputusan yang salah dalam sistem. Dalam industri, istilah cacat digunakan secara luas, sedangkan di kalangan peneliti istilah kesalahan lebih umum. Untuk semua tujuan praktis, kedua istilah tersebut adalah sinonim. Dalam buku ini, kami menggunakan kedua istilah tersebut secara bergantian sebagaimana diperlukan.
+
+## 1.6 PENGERTIAN KEANDALAN (RELIABILITY) PERANGKAT LUNAK
+Tidak peduli seberapa sering kita menjalankan siklus pengujian–menemukan kesalahan–memperbaiki selama pengembangan perangkat lunak, beberapa kesalahan mungkin luput dari perhatian kita, dan ini pada akhirnya akan muncul di lokasi user. Oleh karena itu, ukuran kuantitatif yang berguna dalam menilai kualitas perangkat lunak adalah keandalannya. Keandalan perangkat lunak didefinisikan sebagai probabilitas pengoperasian sistem perangkat lunak tanpa kegagalan selama waktu tertentu dalam lingkungan tertentu. Tingkat keandalan sistem bergantung pada masukan yang menyebabkan kegagalan diamati oleh pengguna akhir. Keandalan perangkat lunak dapat diperkirakan melalui pengujian acak, seperti yang disarankan oleh Hamlet. Karena pengertian keandalan bersifat khusus untuk "lingkungan tertentu", data pengujian harus diambil dari distribusi masukan agar menyerupai penggunaan sistem di masa mendatang. Menangkap pola penggunaan sistem di masa mendatang secara umum dijelaskan dalam bentuk yang disebut profil operasional. Konsep profil operasional sistem dirintis oleh John D. Musa di AT&T Bell Laboratories antara tahun 1970-an dan 1990-an
+
+## 1.7 Tujuan Pengujian
+Para pemangku kepentingan dalam proses pengujian adalah programer, _test engineer_, manajer proyek, dan user. Pemangku kepentingan adalah orang atau organisasi yang memengaruhi perilaku sistem atau yang dipengaruhi oleh sistem itu.
+Pemangku kepentingan yang berbeda melihat proses pengujian dari berbagai perspektif seperti yang dijelaskan di bawah ini:
+* Sistem berfungsi: Saat menerapkan unit program, programmer mungkin ingin menguji apakah unit bekerja dalam keadaan normal atau tidak.Itu Programmer mendapat kepercayaan diri jika unit bekerja untuk kepuasannya.Gagasan yang sama berlaku untuk seluruh sistem juga - setelah sistem telah diintegrasikan, pengembang mungkin ingin menguji apakah sistem melakukan fungsi dasar atau tidak.Di sini, untuk alasan psikologis, Tujuan pengujian adalah untuk menunjukkan bahwa sistem berfungsi, daripada tidak berfungsi.
+* Sistem tidak berfungsi: Setelah programmer (atau tim pengembangan) puas bahwa unit (atau sistem) bekerja pada tingkat tertentu, lebih banyak tes dilakukan dengan tujuan menemukan kesalahan dalam unit (atau sistem).Di sini, idenya adalah mencoba membuat unit (atau sistem) gagal.
+* Mengurangi risiko kegagalan: Sebagian besar sistem perangkat lunak yang kompleks mengandung kesalahan, yang menyebabkan sistem gagal dari waktu ke waktu.Konsep "gagal dari waktu ke waktu" ini menimbulkan gagasan tingkat kegagalan.Ketika kesalahan ditemukan dan diperbaiki saat melakukan lebih banyak tes, tingkat kegagalan suatu sistem umumnya berkurang.Dengan demikian, tujuan tingkat yang lebih tinggi dari melakukan tes adalah untuk menurunkan risiko gagal ke tingkat yang dapat diterima.
+* Mengurangi biaya pengujian: Berbagai jenis biaya yang terkait dengan proses pengujian termasuk biaya merancang, memelihara, dan menjalankan kasus uji, biaya menganalisis hasil pelaksanaan setiap kasus uji, biaya mendokumentasikan kasus uji,dan biaya untuk benar -benar mengeksekusi sistem dan mendokumentasikannya.
+
+    Oleh karena itu, semakin sedikit jumlah kasus uji yang dirancang, semakin sedikit biaya pengujian yang terkait.Namun, menghasilkan sejumlah kecil kasus uji sewenang -wenang bukanlah cara yang baik untuk menghemat biaya.Level tertinggi tujuan melakukan tes adalah untuk menghasilkan perangkat lunak berisiko rendah dengan jumlah kasus uji yang lebih sedikit.Gagasan ini membawa kita ke konsep efektivitas kasus uji.Oleh karena itu insinyur uji harus memilih kasus uji yang lebih sedikit dan efektif.
+
+## 1.8 Apa itu test case?
+Dalam bentuknya yang paling mendasar, test case adalah sepasang `<input, hasil yang diharapkan>` sederhana.Jika suatu program yang diuji diharapkan untuk menghitung akar kuadrat dari angka non -negatif, maka empat contoh kasus uji seperti yang ditunjukkan pada contoh berikut
+
+```
+TB1: <0, 0>
+TB2: <25, 5>
+TB3: <40, 6.02343254>
+TB4: <100.5, 330.3239128>
+```
+**gambar 1.3**
+
+```
+TS1: <cek saldo, 1000000>, <tarik tunai, "jumlah?">, <200000, "Rp. 200.000">, <cek saldo, 800000>
+```
+**gambar 1.4**
+
+Dalam _stateless system_, di mana hasilnya hanya bergantung pada input saat ini, kasus uji sangat sederhana dalam struktur, seperti yang ditunjukkan pada Gambar 1.3. Program untuk menghitung akar kuadrat dari angka positif adalah contoh dari _stateless syste_. Kompiler untuk bahasa pemrograman C adalah contoh lain dari _stateless system_. Kompiler adalah _stateless syste_ karena untuk mengkompilasi program yang tidak perlu diketahui tentang program yang dikompilasi sebelumnya.
+
+Dalam _state-oriented system_, di mana hasil program tergantung pada keadaan saat ini sistem dan input saat ini, kasus uji dapat terdiri dari urutan `<input, hasil yang diharapkan>` yang diharapkan. Sistem switching telepon dan mesin teller otomatis (ATM) adalah contoh _state-oriented system_.Untuk mesin ATM, test case untuk pengujian fungsi penarikan ditunjukkan pada Gambar 1.4. Di sini, kita berasumsi bahwa pengguna telah memasukkan input yang divalidasi, seperti uang tunai Kartu dan Nomor PIN.
+
+Dalam kasus uji TS1, "cek saldo" dan "tarik tunai" di set pertama, kedua, dan keempat mewakili penekanan tombol yang sesuai pada keypad ATM. Diasumsikan bahwa akun pengguna memiliki 1.000.000 di atasnya, dan pengguna ingin menarik jumlah 200.000. Hasil yang diharapkan "Rp. 200.000" dalam set ketiga mewakili uang tunai yang dikeluarkan oleh ATM. Setelah operasi penarikan, pengguna memastikan bahwa saldo yang tersisa adalah 800.000
+
+Untuk _state-oriented system_, sebagian besar kasus ujinya berkaitan dengan memberikan input yang biasanya berhubungan dengan suatu keputusan waktu dan waktu. Contoh kasusnya akan akan dibahas pada bagian lain.
