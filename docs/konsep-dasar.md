@@ -89,3 +89,29 @@ Dalam _state-oriented system_, di mana hasil program tergantung pada keadaan saa
 Dalam kasus uji TS1, "cek saldo" dan "tarik tunai" di set pertama, kedua, dan keempat mewakili penekanan tombol yang sesuai pada keypad ATM. Diasumsikan bahwa akun pengguna memiliki 1.000.000 di atasnya, dan pengguna ingin menarik jumlah 200.000. Hasil yang diharapkan "Rp. 200.000" dalam set ketiga mewakili uang tunai yang dikeluarkan oleh ATM. Setelah operasi penarikan, pengguna memastikan bahwa saldo yang tersisa adalah 800.000
 
 Untuk _state-oriented system_, sebagian besar kasus ujinya berkaitan dengan memberikan input yang biasanya berhubungan dengan suatu keputusan waktu dan waktu. Contoh kasusnya akan akan dibahas pada bagian lain.
+
+1.9 Hasil yang diharapkan
+Hasil eksekusi program adalah entitas yang kompleks yang mungkin termasuk yang berikut:
+* Nilai yang dihasilkan oleh program:
+    Output untuk observasi lokal (integer, text, audio, image)
+    Output (pesan) untuk penyimpanan jarak jauh, manipulasi, atau pengamatan
+* Perubahan kondisi:
+    Perubahan kondisi program
+    Perubahan kondisi database (karena penambahan, penghapusan, dan operasi update)
+* Urutan atau set nilai yang harus ditafsirkan bersama untuk hasilnya valid
+
+Konsep penting dalam desain tes adalah konsep oracle.Sebuah oracle adalah entitas apa pun - program, proses, ahli manusia, atau badan data - yang memberi tahu kita hasil yang diharapkan dari tes atau serangkaian tes tertentu.Kasus uji hanya bermakna jika dimungkinkan untuk memutuskan penerimaan hasil yang dihasilkan oleh program yang sedang diuji.
+
+Idealnya, hasil tes yang diharapkan harus dihitung saat merancang uji kasus.Dengan kata lain, hasil tes dihitung sebelum program dieksekusi dengan input tes yang dipilih.Idenya di sini adalah bahwa seseorang harus dapat menghitung hasil yang diharapkan dari pemahaman tentang persyaratan program.Prekomputasi hasil yang diharapkan akan menghilangkan bias implementasi jika kasus uji dirancang oleh pengembang.
+
+Dalam kasus yang luar biasa, di mana sangat sulit, tidak mungkin, atau bahkan tidak diinginkan untuk menghitung hasil yang diharapkan tunggal, seseorang harus mengidentifikasi hasil yang diharapkan dengan memeriksa hasil tes yang sebenarnya, seperti yang dijelaskan dalam hal berikut:
+1. Jalankan program dengan input yang dipilih.
+2. Amati hasil aktual dari eksekusi program.
+3. Pastikan bahwa hasil yang sebenarnya adalah hasil yang diharapkan.
+4. Gunakan hasil aktual yang diverifikasi sebagai hasil yang diharapkan dalam menjalankan kasus uji berikutnya.
+
+## 1.20 Konsep Pengujian Lengkap
+Bukan hal yang aneh untuk menemukan orang membuat klaim seperti "Saya telah menguji program secara mendalam."Pengujian lengkap, atau lengkap, berarti tidak ada kesalahan yang belum ditemukan pada akhir fase uji. Semua masalah harus diketahui di akhir pengujian lengkap.Untuk sebagian besar sistem, pengujian lengkap hampir mustahil karena alasan berikut:
+* Domain input yang mungkin dari suatu program terlalu besar untuk sepenuhnya digunakan dalam menguji suatu sistem. Ada kedua input yang valid dan input yang tidak valid.Program ini mungkin memiliki sejumlah besar negara bagian. Mungkin ada batasan waktu pada input, yaitu, input mungkin valid pada waktu tertentu dan tidak valid di waktu lain. Nilai input yang valid tetapi tidak tepat waktu disebut input yang tidak tepat. Domain input suatu sistem bisa sangat besar untuk sepenuhnya digunakan dalam menguji suatu program.
+* Masalah desain mungkin terlalu rumit untuk diuji sepenuhnya.Desainnya mungkin termasuk keputusan dan asumsi desain implisit. Misalnya, seorang programmer dapat menggunakan variabel global atau variabel statis untuk mengontrol eksekusi program.
+* Mungkin tidak mungkin untuk menciptakan semua lingkungan eksekusi yang mungkin dari sistem. Ini menjadi lebih signifikan ketika perilaku sistem perangkat lunak tergantung pada dunia yang nyata, luar, seperti cuaca, suhu, ketinggian, tekanan, dan sebagainya.
