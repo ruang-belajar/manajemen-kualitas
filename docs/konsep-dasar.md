@@ -88,7 +88,7 @@ Dalam literatur tentang pengujian perangkat lunak, seseorang dapat menemukan ref
 * Error: Error adalah keadaan sistem. Jika tidak ada tindakan korektif oleh sistem, keadaan kesalahan dapat menyebabkan kegagalan yang tidak akan dikaitkan dengan peristiwa apa pun setelah kesalahan.
 * Fault (Kesalahan): Kesalahan adalah penyebab error yang dinilai.
 
-Kesalahn (fault) mungkin tidak terdeteksi dalam waktu lama, hingga suatu kejadian mengaktifkannya. Ketika suatu kejadian mengaktifkan kesalahan, pertama-tama ia membawa program ke dalam status kesalahan (intermediate error state). Jika komputasi dibiarkan berlanjut dari status kesalahan tanpa tindakan korektif, program tersebut akhirnya menyebabkan kegagalan (failure). Sebagai tambahan, dalam komputasi yang toleran terhadap kesalahan, tindakan korektif dapat diambil untuk mengeluarkan program dari status kesalahan ke status yang diinginkan sehingga komputasi berikutnya tidak akhirnya menyebabkan kegagalan. Oleh karena itu, proses manifestasi kegagalan dapat secara ringkas direpresentasikan sebagai rantai perilaku sebagai berikut: _fault_ → _error_ → _failure_. Rantai perilaku tersebut dapat berulang untuk sementara waktu, yaitu, kegagalan satu komponen dapat menyebabkan kegagalan komponen lain yang berinteraksi.
+Kesalahan (fault) mungkin tidak terdeteksi dalam waktu lama, hingga suatu kejadian mengaktifkannya. Ketika suatu kejadian mengaktifkan kesalahan, pertama-tama ia membawa program ke dalam status kesalahan (intermediate error state). Jika komputasi dibiarkan berlanjut dari status kesalahan tanpa tindakan korektif, program tersebut akhirnya menyebabkan kegagalan (failure). Sebagai tambahan, dalam komputasi yang toleran terhadap kesalahan, tindakan korektif dapat diambil untuk mengeluarkan program dari status kesalahan ke status yang diinginkan sehingga komputasi berikutnya tidak akhirnya menyebabkan kegagalan. Oleh karena itu, proses manifestasi kegagalan dapat secara ringkas direpresentasikan sebagai rantai perilaku sebagai berikut: _fault_ → _error_ → _failure_. Rantai perilaku tersebut dapat berulang untuk sementara waktu, yaitu, kegagalan satu komponen dapat menyebabkan kegagalan komponen lain yang berinteraksi.
 
 Definisi kegagalan di atas mengasumsikan bahwa spesifikasi yang diberikan dapat diterima oleh pelanggan. Namun, jika spesifikasi tersebut tidak memenuhi harapan pelanggan, maka, tentu saja, bahkan implementasi yang bebas kesalahan pun gagal memuaskan pelanggan. Merupakan tugas yang sulit untuk memberikan definisi yang tepat tentang kesalahan, error, atau kegagalan perangkat lunak, karena "faktor manusia" yang terlibat dalam penerimaan keseluruhan suatu sistem. Dalam bisnis perangkat lunak modern, kegagalan perangkat lunak berarti "harapan pelanggan tidak terpenuhi dan/atau pelanggan tidak dapat melakukan pekerjaan yang bermanfaat dengan produk".
 
@@ -159,7 +159,7 @@ Bukan hal yang aneh untuk menemukan orang membuat klaim seperti "Saya telah mela
 ## 1.12 TESTING ACTIVITIES
 Untuk menguji suatu program, _test engineer_ harus melakukan urutan kegiatan pengujian. Sebagian besar kegiatan ini telah ditunjukkan pada Gambar 1.6 dan dijelaskan sebagai berikut.Penjelasan ini fokus pada satu kasus uji.
 
-mages/gambar1.6.PNG)
+![](images/gambar1.6.PNG)
 
 * Identifikasi tujuan yang akan diuji: Aktivitas pertama adalah mengidentifikasi tujuan yang akan diuji.Tujuan mendefinisikan niat, atau tujuan, merancang satu atau lebih kasus uji untuk memastikan bahwa program mendukung tujuan tersebut.Tujuan yang jelas harus dikaitkan dengan setiap kasus uji.
 
