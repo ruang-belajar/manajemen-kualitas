@@ -2,3 +2,15 @@
 ---
 
 @import "{{ site.theme }}";
+
+.page-header {
+    background-image:url(images/cover.jpg);
+}
+
+.project-name {
+    background-color: gray;
+}
+
+.project-tagline {
+    background-color: gray;
+}

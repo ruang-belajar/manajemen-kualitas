@@ -1,7 +1,4 @@
 # Manajemen Kualitas Sistem Informasi
-
-![](images/cover.jpg)
-
 1. [Konsep Dasar dan Pendahuluan](konsep-dasar.md)
 2. [Teori dalam Pengujian Program](teori-program-testing.md)
 
