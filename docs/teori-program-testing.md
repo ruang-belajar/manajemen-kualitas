@@ -19,40 +19,115 @@ Landasan teoritis pengujian memberikan wawasan berharga kepada penguji dan penge
 Dalam bab ini, tiga teori pengujian yang terkenal dibahas. Yaitu _teori Goodenough dan Gerhart_, _teori Weyuker dan Ostrand_, dan _teori Gourlay_. _Goodenough dan Gerhart_ memperkenalkan beberapa konsep utama seperti pengujian ideal, reliabilitas dan validitas pengujian, kriteria pemilihan pengujian, pengujian menyeluruh, dan lima kategori kesalahan program. _Weyuker dan Ostrand_ menyempurnakan beberapa ide di atas dalam bentuk kriteria reliabilitas seragam, kriteria validitas seragam, dan pengujian ideal seragam. _Gourlay_ memperkenalkan konsep sistem pengujian dan metode umum untuk membandingkan berbagai metode pengujian.
 
 ## 2.2 TEORI GOODENOUGH DAN GERHART
-Goodenough dan Gerhart menerbitkan paper pada tahun 1975 tentang pemilihan data uji. Makalah ini memberikan konsep pengujian mendasar, mengidentifikasi beberapa jenis kesalahan program, dan memberikan teori untuk memilih data uji dari domain input suatu program. Meskipun teori ini bukan tanpa kritik, itu dikutip secara luas dan dihargai dalam komunitas riset pengujian perangkat lunak
+Teori **Goodenough and Gerhart** dalam konteks *software testing* merujuk pada konsep-konsep yang dikemukakan oleh John B. Goodenough dan Susan L. Gerhart pada tahun 1975 dalam makalah mereka tentang pengujian perangkat lunak. Mereka mendefinisikan beberapa prinsip dasar yang masih relevan hingga sekarang. Konsep ini berfokus pada bagaimana mengukur efektivitas dari *test case* dalam pengujian perangkat lunak. Berikut adalah penjelasan singkat mengenai konsep ini:
 
-[TODO]
+### 2.2.1 *Test Case Adequacy* (Kecukupan Kasus Uji)
+   - Goodenough dan Gerhart membahas bagaimana menentukan apakah suatu set *test case* sudah cukup untuk menguji sebuah program. Mereka menekankan bahwa suatu *test case* dikatakan cukup jika dapat menunjukkan adanya kesalahan dalam program, bukan hanya jika ia memberikan hasil yang benar.
+   - Konsep ini mendorong pengujian yang lebih menyeluruh dan bertujuan untuk menemukan potensi kesalahan daripada hanya memastikan bahwa program berjalan sesuai ekspektasi.
+
+### 2.2.2 *Test Data Adequacy Criteria* (Kriteria Kecukupan Data Uji)
+   - Mereka memperkenalkan kriteria kecukupan untuk data uji, yang berarti bahwa data uji harus cukup luas untuk menutupi berbagai skenario dan kondisi yang mungkin terjadi dalam sebuah program.
+   - Kriteria ini membantu dalam menentukan apakah cakupan pengujian sudah memadai, artinya sudah mencakup semua jalur yang mungkin dilalui oleh kode, atau skenario-skenario penting yang berpotensi menimbulkan masalah.
+
+### 2.2.3 Fokus pada *Input Domain* dan *Behavioral Testing*
+   - Goodenough dan Gerhart juga menekankan pentingnya menguji perangkat lunak dengan menggunakan pendekatan berdasarkan domain input, yaitu memastikan bahwa berbagai rentang input yang mungkin terjadi telah diuji.
+   - Selain itu, mereka menekankan pentingnya *behavioral testing* yang menilai bagaimana perangkat lunak bereaksi terhadap input yang berbeda-beda, baik itu input valid maupun input yang tidak valid.
+
+### 2.2.4 *Reliable Software Testing* (Pengujian yang Andal)
+   - Goodenough dan Gerhart menggarisbawahi bahwa pengujian tidak hanya bertujuan untuk memastikan bahwa perangkat lunak memenuhi kebutuhan spesifikasinya, tetapi juga untuk meningkatkan keandalan perangkat lunak secara keseluruhan.
+   - Ini berarti pengujian harus membantu menemukan kesalahan-kesalahan yang ada serta memperbaikinya, sehingga perangkat lunak menjadi lebih stabil dan dapat diandalkan oleh pengguna.
+
+Secara keseluruhan, teori Goodenough dan Gerhart memberikan landasan bagi pendekatan sistematis dalam pengujian perangkat lunak, yang menekankan bahwa pengujian harus bertujuan untuk menemukan kesalahan dan memastikan bahwa data uji mencakup semua aspek penting dari program. Teori ini menjadi dasar bagi berbagai metodologi pengujian modern, seperti *black-box testing* dan *white-box testing*, dengan tujuan memastikan kualitas perangkat lunak yang lebih baik.
 
 ## 2.3 TEORI WEYUKER DAN OSTRAND
-Masalah utama dalam teori Goodenough dan Gerhart adalah bahwa keandalan dan validitas kriteria tergantung pada keberadaan kesalahan dalam suatu program dan tipe mereka. Weyuker dan Ostrand memberikan teori yang dimodifikasi di mana validitas dan reliabilitas kriteria pemilihan uji hanya tergantung pada spesifikasi program, daripada program. Mereka mengusulkan konsep kriteria pemilihan tes yang ideal yang seragam untuk spesifikasi output yang diberikan. Dalam teori Goodenough dan Gerhart, tersirat dalam definisi predikat `OK(d)` dan `SUCCESSFUL(t)` adalah program `P`. dengan `SUCCESSFUL()` sebagai `SUCC()`, kedua predikatnya ditulis ulang sebagai berikut:
+Kombinasi teori Weyuker dan Ostrand dalam konteks *software testing* memberikan panduan menyeluruh untuk memahami dan mengimplementasikan pengujian perangkat lunak secara lebih efektif. Meskipun masing-masing teori memiliki fokus yang berbeda—Weyuker pada evaluasi kriteria pengujian, dan Ostrand pada *testability* perangkat lunak—menggabungkan kedua teori ini memberikan perspektif yang lebih komprehensif tentang bagaimana perangkat lunak dapat diuji dan bagaimana proses pengujian dapat dirancang agar lebih efektif. Berikut adalah penjelasan mengenai kombinasi ini:
 
-[TODO]
+### 2.3.1 Evaluasi Kriteria Pengujian (Weyuker) dan Kemudahan Pengujian (Ostrand)
+   - **Teori Weyuker** memberikan dasar untuk menilai kualitas dan kecukupan suatu kriteria pengujian melalui serangkaian aksioma. Ini membantu penguji memahami apakah suatu metode atau strategi pengujian dapat diandalkan dalam mendeteksi kesalahan. Misalnya, Weyuker menekankan pentingnya *test coverage* yang mencakup semua jalur eksekusi dalam kode dan bagaimana kriteria pengujian harus mampu menangkap perbedaan antara program yang berbeda.
+
+   - **Teori Ostrand**, di sisi lain, membantu dalam memahami faktor-faktor yang memengaruhi seberapa mudah perangkat lunak tersebut untuk diuji. Dengan mengetahui faktor seperti kompleksitas kode, modularitas, keterhubungan antar modul, serta kemampuan penguji dan alat yang tersedia, teori ini memungkinkan penguji merancang pengujian yang lebih sesuai dengan karakteristik perangkat lunak yang diuji.
+
+   - Kombinasi keduanya memungkinkan penguji untuk:
+     - Menilai kriteria pengujian yang tepat menggunakan prinsip Weyuker, sambil mempertimbangkan sejauh mana perangkat lunak tersebut mudah atau sulit diuji menurut faktor-faktor yang dijelaskan oleh Ostrand.
+     - Mengoptimalkan pemilihan pendekatan pengujian dengan mempertimbangkan karakteristik perangkat lunak, sehingga pengujian dapat dilakukan dengan cara yang paling efisien.
+
+### 2.3.2 Mencapai Cakupan Pengujian Maksimal
+   - Weyuker menekankan pada kebutuhan untuk mencapai cakupan pengujian yang memadai melalui prinsip-prinsipnya, seperti cakupan yang harus mampu membedakan antara dua program yang berbeda dalam hal hasilnya, bahkan jika keduanya tampak serupa dari luar (Aksioma Equivalence dan Antiextensionality).
+
+   - Ostrand berfokus pada bagaimana struktur dan kompleksitas kode memengaruhi jumlah pengujian yang diperlukan. Ia menyarankan penggunaan metrik seperti *cyclomatic complexity* dan *branch coverage* untuk memastikan bahwa semua jalur eksekusi dalam program telah diuji.
+
+   - Dengan menggabungkan kedua perspektif ini, tim penguji dapat:
+     - Menggunakan metrik untuk menilai kompleksitas kode (dari teori Ostrand) sebagai dasar untuk menentukan jumlah kasus uji yang dibutuhkan.
+     - Memastikan bahwa cakupan tersebut cukup untuk membedakan semua jalur program yang mungkin (seperti yang disarankan oleh teori Weyuker), sehingga tidak ada jalur yang terlewat.
+
+### 2.3.3 Memperbaiki Desain Perangkat Lunak agar Lebih Mudah Diuji
+   - **Teori Ostrand** mengidentifikasi bahwa *testability* sangat dipengaruhi oleh faktor-faktor internal, seperti struktur kode, modularitas, dan keterhubungan antar modul (*coupling*). Dengan mengetahui ini, pengembang dapat merancang perangkat lunak agar lebih mudah diuji dengan membuat kode yang lebih modular, mengurangi kompleksitas berlebih, dan membatasi interaksi antar komponen.
+
+   - **Prinsip Weyuker** bisa membantu pengembang dan penguji dalam memahami bagaimana setiap perubahan desain akan memengaruhi proses pengujian. Misalnya, prinsip Monotonicity dalam teori Weyuker menggarisbawahi bahwa penambahan fitur pada perangkat lunak seharusnya tidak membuat pengujian menjadi lebih mudah, tetapi justru seharusnya memerlukan lebih banyak pengujian.
+
+   - Kombinasi ini dapat membantu pengembang:
+     - Merancang perangkat lunak yang secara struktural lebih mudah diuji (berdasarkan teori Ostrand).
+     - Memahami bahwa perubahan pada desain, misalnya penambahan fitur, akan membutuhkan adaptasi dalam kriteria pengujian untuk memastikan bahwa cakupan pengujian tetap memadai (berdasarkan teori Weyuker).
+
+### 2.3.4 Strategi Pengujian yang Lebih Adaptif
+   - **Teori Weyuker** menekankan bahwa tidak ada satu kriteria pengujian yang cocok untuk semua situasi (Aksioma Generality). Oleh karena itu, penguji harus fleksibel dalam memilih kriteria pengujian yang sesuai dengan sifat perangkat lunak yang diuji.
+
+   - Dengan **teori Ostrand**, penguji mendapatkan panduan untuk memahami kompleksitas program dan dapat memperkirakan berapa banyak upaya yang diperlukan untuk menguji setiap modul atau komponen. Ini memungkinkan penguji untuk menyesuaikan strategi pengujian berdasarkan tingkat kesulitan yang dihadapi dalam setiap bagian perangkat lunak.
+
+   - Dengan kombinasi ini, penguji dapat:
+     - Memilih kriteria pengujian yang tepat dan melakukan penyesuaian sesuai dengan kesulitan yang ditemukan selama proses pengujian.
+     - Mengalokasikan sumber daya pengujian secara lebih efisien, fokus pada bagian perangkat lunak yang lebih rumit atau yang lebih rentan terhadap kesalahan.
+
+### 2.3.5 Peningkatan Efisiensi dan Efektivitas Pengujian
+   - Dengan menggunakan **aksioma Weyuker**, penguji dapat memastikan bahwa setiap upaya pengujian memberikan nilai yang signifikan dalam hal deteksi kesalahan dan jaminan kualitas perangkat lunak.
+   - Sementara itu, **teori Ostrand** membantu dalam merencanakan pengujian dengan mempertimbangkan faktor-faktor praktis seperti ketersediaan waktu, sumber daya, dan alat uji yang dapat mempercepat proses pengujian.
+
+   - Kombinasi ini memastikan bahwa:
+     - Pengujian tidak hanya menyeluruh, tetapi juga difokuskan pada area yang paling kritis dan berpotensi memiliki cacat.
+     - Penguji dapat menghindari melakukan pengujian berlebihan pada bagian perangkat lunak yang sederhana, sehingga fokus pengujian bisa diarahkan pada area yang lebih membutuhkan perhatian.
+
+### Kesimpulan: Manfaat dan Aplikasi dalam Proses Pengujian
+Kombinasi teori Weyuker dan Ostrand dalam *software testing* memberikan kerangka berpikir yang menyeluruh untuk merancang, mengevaluasi, dan mengoptimalkan proses pengujian perangkat lunak. Ini memungkinkan tim pengujian untuk tidak hanya memahami seberapa baik suatu metode pengujian mencakup kebutuhan pengujian, tetapi juga mengidentifikasi cara untuk meningkatkan desain perangkat lunak agar lebih mudah diuji. Dengan demikian, tim pengembang dan penguji dapat lebih efisien dalam mendeteksi cacat, menghemat waktu dan sumber daya, serta menghasilkan perangkat lunak dengan kualitas yang lebih tinggi.
 
 
 ## 2.4 TEORI GOURLAY
-Tujuan yang ideal dalam pengembangan perangkat lunak adalah untuk mengetahui apakah suatu program benar atau tidak, di mana program yang benar tidak memiliki kesalahan.Banyak hasil penelitian telah dilaporkan di bidang kebenaran program.Namun, karena sifat teknik verifikasi program yang sangat terbatas, tidak ada pengembang yang melakukan upaya untuk membuktikan kebenaran bahkan program kecil, katakanlah, beberapa ribu baris, apalagi program besar dengan jutaan baris kode. Sebaliknya, pengujian diterima di industri sebagai cara praktis untuk menemukan kesalahan dalam program. Sisi flip dari pengujian adalah bahwa ia tidak dapat digunakan untuk menyelesaikan pertanyaan tentang kebenaran program, yang merupakan tujuan yang ideal.Meskipun pengujian tidak dapat menyelesaikan masalah kebenaran program, ada kebutuhan untuk teori pengujian untuk memungkinkan kita membandingkan kekuatan metode pengujian yang berbeda.
+Teori Gourlay adalah salah satu pendekatan yang dikembangkan oleh Stephen N. Gourlay pada tahun 1981 untuk memahami proses belajar dalam organisasi. Meskipun teori ini tidak secara langsung terkait dengan pengujian perangkat lunak, konsep-konsep dasarnya dapat diterapkan untuk meningkatkan pemahaman tentang proses pembelajaran yang terlibat dalam pengujian perangkat lunak.
 
-Untuk memotivasi diskusi teoretis tentang pengujian, kami mulai dengan proses yang ideal
-Untuk pengembangan perangkat lunak, yang terdiri dari langkah -langkah berikut: 40 Bab 2 Teori Pengujian Program
-* Pelanggan dan tim pengembangan menentukan kebutuhan.
-* Tim pengembangan mengambil spesifikasi dan upaya untuk menulis program untuk memenuhi spesifikasi.
-* Seorang insinyur uji mengambil spesifikasi dan program dan memilih satu set kasus uji.Kasus uji didasarkan pada spesifikasi dan program.
-* Program ini dijalankan dengan data uji yang dipilih, dan hasil tes dibandingkan dengan hasil yang diharapkan.
-* Program ini dikatakan memiliki kesalahan jika beberapa tes gagal.
-* Orang dapat mengatakan program yang siap digunakan jika melewati semua kasus uji.
+### Konsep Utama Teori Gourlay
+Teori Gourlay memandang pembelajaran sebagai proses yang terjadi dalam beberapa tahap, yaitu:
 
-Kami fokus pada pemilihan kasus uji dan interpretasi hasil mereka.Kami mengasumsikan bahwa spesifikasinya benar, dan spesifikasinya adalah satu -satunya wasit dari kebenaran program.Program ini dikatakan benar jika dan hanya jika memenuhi spesifikasi.Teori pengujian Gourlay membangun hubungan antara tiga set entitas, yaitu, spesifikasi, program, dan tes, dan memberikan dasar untuk membandingkan metode yang berbeda untuk memilih tes.
+1. **Kognitif (Cognitive)**: Pada tahap ini, seseorang atau tim belajar tentang konsep dan teori dasar yang terkait dengan subjek tertentu. Dalam konteks pengujian perangkat lunak, tahap ini melibatkan pemahaman tentang metode pengujian, teknik pengujian (seperti pengujian fungsional, pengujian non-fungsional), serta alat yang digunakan dalam pengujian.
 
-[TODO]
+2. **Afektif (Affective)**: Tahap ini mencakup pembentukan sikap, motivasi, dan nilai-nilai terhadap aktivitas pengujian. Misalnya, seorang penguji perangkat lunak mungkin mulai memahami pentingnya pengujian yang teliti untuk memastikan kualitas produk dan menunjukkan sikap yang positif terhadap peningkatan kualitas.
+
+3. **Psikomotorik (Psychomotoric)**: Pada tahap ini, keterampilan praktis yang dibutuhkan untuk melakukan pengujian perangkat lunak mulai dikembangkan. Ini termasuk kemampuan untuk menjalankan tes, menganalisis hasilnya, dan mengidentifikasi bug atau cacat dalam perangkat lunak. Tahap ini mengacu pada penguasaan keterampilan praktis dalam menggunakan alat pengujian atau framework tertentu.
+
+### Aplikasi Teori Gourlay dalam Pengujian Perangkat Lunak
+Dalam konteks pengujian perangkat lunak, Teori Gourlay dapat digunakan untuk memahami bagaimana individu atau tim tester berkembang dalam hal keterampilan dan pemahaman mereka. Berikut adalah contoh penerapan setiap tahap:
+
+- **Kognitif**: Tester mempelajari teori dan konsep pengujian, seperti pengujian unit, pengujian integrasi, pengujian sistem, dan lainnya. Mereka juga belajar tentang pentingnya teknik desain kasus uji dan strategi pengujian yang tepat.
+
+- **Afektif**: Tester mulai menunjukkan minat dan kepedulian terhadap kualitas perangkat lunak yang diuji. Mereka memahami dampak dari kesalahan yang ditemukan terhadap pengalaman pengguna dan nilai bisnis dari perangkat lunak tersebut. Ini dapat mencakup rasa tanggung jawab untuk menemukan dan melaporkan bug secara tepat waktu.
+
+- **Psikomotorik**: Tester menjadi terampil dalam menggunakan alat pengujian seperti Selenium, JUnit, atau Postman. Mereka juga dapat menulis skrip otomatisasi pengujian, menjalankan tes secara efisien, serta menganalisis log dan laporan hasil pengujian.
+
+### Manfaat Pendekatan Gourlay untuk Pengujian Perangkat Lunak
+1. **Pembelajaran Terstruktur**: Dengan memecah proses pembelajaran menjadi tahap-tahap ini, manajer pengujian atau lead tester dapat merancang program pelatihan yang lebih efektif untuk meningkatkan keterampilan tim mereka.
+   
+2. **Peningkatan Kinerja Tim**: Memahami setiap tahap pembelajaran memungkinkan manajer untuk memberikan dukungan yang tepat bagi tester di berbagai tahap perkembangan, baik itu melalui pembelajaran formal, bimbingan, atau pelatihan langsung.
+
+3. **Peningkatan Kualitas Pengujian**: Dengan tim yang memiliki pemahaman yang baik (kognitif), memiliki sikap positif (afektif), dan keterampilan teknis yang kuat (psikomotorik), kualitas pengujian perangkat lunak yang dilakukan juga akan meningkat, sehingga produk perangkat lunak yang dihasilkan lebih andal.
+
+Dengan mengaplikasikan Teori Gourlay dalam proses pelatihan dan pengembangan tester, sebuah tim dapat lebih efektif dalam menguasai proses pengujian perangkat lunak, menghasilkan proses yang lebih baik, dan produk perangkat lunak yang lebih berkualitas.
 
 
 ## 2.5 KECUKUPAN PENGUJIAN
-Pengujian memberi desainer dan pemrogram kepercayaan pada komponen perangkat lunak atau produk lengkap jika melewati kasus uji mereka.Asumsikan bahwa satu set kasus uji `T` telah dirancang untuk menguji program P. Kami mengeksekusi `P` dengan set uji `T`. Jika `T` mengungkapkan kesalahan di `P`, maka kami memodifikasi program dalam upaya untuk memperbaiki kesalahan tersebut. Pada tahap ini, mungkin ada kebutuhan untuk merancang beberapa kasus uji baru, karena, misalnya, kami dapat memasukkan prosedur baru dalam kode.Setelah memodifikasi kode, kami menjalankan program dengan set tes baru.Dengan demikian, kami menjalankan loop tes-dan-fix sampai tidak ada lagi kesalahan yang diungkapkan oleh set uji yang diperbarui.Sekarang kita menghadapi dilema sebagai berikut: Apakah `P` benar -benar bebas kesalahan, atau tidak cukup baik untuk mengungkapkan kesalahan yang tersisa di `P`? Dari pengujian kami tidak dapat menyimpulkan bahwa `P` adalah bebas kesalahan, karena, seperti yang diamati Dijkstra, pengujian dapat mengungkapkan adanya kesalahan, tetapi bukan ketidakhadiran mereka.Oleh karena itu, jika `P` lulus `T`, kita perlu tahu bahwa `T` "cukup baik" atau, dengan kata lain, bahwa `T` adalah serangkaian tes yang memadai.Penting untuk mengevaluasi kecukupan `T` karena jika `T` ditemukan tidak memadai, maka lebih banyak kasus uji perlu dirancang, seperti yang diilustrasikan pada Gambar 2.4.Kecukupan `T` berarti apakah `T` menguji secara menyeluruh `P`.
+Pengujian memberi desainer dan pemrogram kepercayaan pada komponen perangkat lunak atau produk lengkap jika melewati kasus uji mereka. Asumsikan bahwa satu set kasus uji `T` telah dirancang untuk menguji program P. Kita mengeksekusi `P` dengan set uji `T`. Jika `T` mengungkapkan kesalahan di `P`, maka kami memodifikasi program dalam upaya untuk memperbaiki kesalahan tersebut. Pada tahap ini, mungkin ada kebutuhan untuk merancang beberapa kasus uji baru, karena, misalnya, kami dapat memasukkan prosedur baru dalam kode.Setelah memodifikasi kode, kami menjalankan program dengan set tes baru.Dengan demikian, kami menjalankan loop tes-dan-fix sampai tidak ada lagi kesalahan yang diungkapkan oleh set uji yang diperbarui.Sekarang kita menghadapi dilema sebagai berikut: Apakah `P` benar -benar bebas kesalahan, atau tidak cukup baik untuk mengungkapkan kesalahan yang tersisa di `P`? Dari pengujian kami tidak dapat menyimpulkan bahwa `P` adalah bebas kesalahan, karena, seperti yang diamati Dijkstra, **pengujian dapat mengungkapkan adanya kesalahan, tetapi bukan ketidakhadirannya**. Oleh karena itu, jika `P` lulus `T`, kita perlu tahu bahwa `T` "cukup baik" atau, dengan kata lain, bahwa `T` adalah serangkaian tes yang memadai. Penting untuk mengevaluasi kecukupan `T` karena jika `T` ditemukan tidak memadai, maka lebih banyak kasus uji perlu dirancang, seperti yang diilustrasikan pada Gambar 2.4. Kecukupan `T` berarti apakah `T` menguji secara menyeluruh `P`.
 
 ![](images/gambar2.3.PNG)\
 **Gambar 2.3**
 
-Idealnya, pengujian harus dilakukan dengan set tes yang memadai `T`.Secara intuitif, ide di balik menentukan kriteria untuk mengevaluasi kecukupan tes adalah untuk mengetahui apakah pengujian yang cukup telah dilakukan atau tidak.Kami akan segera kembali ke gagasan kecukupan tes. Dengan tidak adanya kecukupan tes, pengembang akan dipaksa untuk menggunakan langkah-langkah yang dibutuhkan untuk memutuskan kapan harus berhenti pengujian. Beberapa contoh tindakan yang dibutuhkan untuk menghentikan pengujian adalah sebagai berikut:
+Idealnya, pengujian harus dilakukan dengan set tes yang memadai `T`. Secara intuitif, ide di balik menentukan kriteria untuk mengevaluasi kecukupan tes adalah untuk mengetahui apakah pengujian yang cukup telah dilakukan atau tidak. Kita akan segera kembali ke gagasan kecukupan tes. Dengan tidak adanya kecukupan tes, pengembang akan dipaksa untuk menggunakan langkah-langkah yang dibutuhkan untuk memutuskan kapan harus berhenti pengujian. Beberapa contoh tindakan yang dibutuhkan untuk menghentikan pengujian adalah sebagai berikut:
 * Berhenti saat waktu yang dialokasikan untuk pengujian berakhir.
 * Berhenti saat tiba saatnya untuk melepaskan produk.
 * Berhenti saat semua kasus uji dieksekusi tanpa mengungkapkan kesalahan
@@ -63,15 +138,15 @@ Gambar 2.4 menggambarkan dua gagasan penting tentang desain tes dan mengevaluasi
 **Gambar 2.4** Konteks dari penerapan kecukupan pengujian
 
 
-* Kecukupan himpunan uji `T` dievaluasi setelah ditemukan bahwa `T` mengungkapkan tidak ada lagi kesalahan.Orang mungkin berdebat: Mengapa tidak merancang kasus uji untuk memenuhi kriteria kecukupan? Namun, penting untuk merancang kasus uji yang terlepas dari kriteria kecukupan karena tujuan utama pengujian adalah untuk menemukan kesalahan, dan, dengan demikian, desain tes tidak boleh dibatasi oleh kriteria kecukupan. Contoh kriteria desain tes adalah sebagai berikut: Pilih kasus uji untuk menjalankan semua pernyataan dalam suatu program setidaknya sekali.Namun, kesulitan dengan kriteria desain tes seperti itu adalah bahwa kita mungkin tidak dapat mengetahui apakah setiap pernyataan program dapat dieksekusi.Dengan demikian, sulit untuk menilai kecukupan set tes yang dipilih dengan demikian.Akhirnya, karena tujuan pengujian adalah untuk mengungkapkan kesalahan, tidak ada gunanya mengevaluasi kecukupan tes yang ditetapkan selama kesalahan terungkap.
-* Set uji yang memadai tidak mengatakan apa -apa tentang kebenaran suatu program.Pemahaman umum tentang kebenaran adalah bahwa kami telah menemukan dan memperbaiki semua kesalahan dalam suatu program untuk membuatnya "benar."Namun, dalam praktiknya, itu tidak realistis - meskipun sangat diinginkan - untuk menemukan dan memperbaiki semua kesalahan dalam suatu program.Dengan demikian, di satu sisi, kriteria kecukupan mungkin tidak mencoba membidik kebenaran program.Di sisi lain, program bebas kesalahan tidak boleh mengubah set tes sewenang-wenang `T` menjadi tes yang memadai.
+* Kecukupan himpunan uji `T` dievaluasi setelah ditemukan bahwa `T` mengungkapkan tidak ada lagi kesalahan.Orang mungkin berdebat: Mengapa tidak merancang kasus uji untuk memenuhi kriteria kecukupan? Namun, penting untuk merancang kasus uji yang terlepas dari kriteria kecukupan karena tujuan utama pengujian adalah untuk menemukan kesalahan, dan, dengan demikian, desain tes tidak boleh dibatasi oleh kriteria kecukupan. Contoh kriteria desain tes adalah sebagai berikut: Pilih kasus uji untuk menjalankan semua pernyataan dalam suatu program setidaknya sekali. Namun, kesulitan dengan kriteria desain tes seperti itu adalah bahwa kita mungkin tidak dapat mengetahui apakah setiap pernyataan program dapat dieksekusi.Dengan demikian, sulit untuk menilai kecukupan set tes yang dipilih dengan demikian.Akhirnya, karena tujuan pengujian adalah untuk mengungkapkan kesalahan, tidak ada gunanya mengevaluasi kecukupan tes yang ditetapkan selama kesalahan terungkap.
+* Set uji yang memadai tidak mengatakan apa -apa tentang kebenaran suatu program.Pemahaman umum tentang kebenaran adalah bahwa kami telah menemukan dan memperbaiki semua kesalahan dalam suatu program untuk membuatnya "benar." Namun, dalam praktiknya, itu tidak realistis - meskipun sangat diinginkan - untuk menemukan dan memperbaiki semua kesalahan dalam suatu program.Dengan demikian, di satu sisi, kriteria kecukupan mungkin tidak mencoba membidik kebenaran program.Di sisi lain, program bebas kesalahan tidak boleh mengubah set tes sewenang-wenang `T` menjadi tes yang memadai.
 
-Dua poin di atas memberi tahu kami gagasan penting: bahwa kecukupan set tes dievaluasi independen dari proses desain tes untuk program yang diuji. Secara intuitif, set uji `t` dikatakan memadai jika mencakup semua aspek perhitungan aktual yang dilakukan oleh program dan semua perhitungan yang dimaksudkan oleh spesifikasinya.Dua metode praktis untuk mengevaluasi kecukupan tes adalah sebagai berikut:
-* Penyemaian kesalahan: Metode ini mengacu pada menanamkan sejumlah kesalahan dalam program `p` dan mengeksekusi` p` dengan set tes `t`.Jika `t` mengungkapkan k persen dari kesalahan yang ditanamkan, kami berasumsi bahwa` t` hanya mengungkapkan k persen dari kesalahan asli.Jika 100% dari kesalahan yang ditanamkan telah diungkapkan oleh `t`, kami merasa lebih percaya diri tentang kecukupan` t`.Diskusi menyeluruh tentang penyemaian kesalahan dapat ditemukan di Bab 13.
-* Mutasi program: Diberikan program `P`, mutasi adalah program yang diperoleh dengan membuat perubahan kecil ke` P`.Dalam metode mutasi program, serangkaian mutasi diperoleh dari `P`.Beberapa mutasi mungkin mengandung kesalahan dan sisanya setara dengan `P`.Tes `t` dikatakan memadai jika menyebabkan setiap mutasi yang salah menghasilkan hasil yang tidak terduga.Diskusi yang lebih menyeluruh tentang mutasi program dapat ditemukan di Bab 3.
+Dua poin di atas memberi tahu kami gagasan penting: bahwa kecukupan set tes dievaluasi independen dari proses desain tes untuk program yang diuji. Secara intuitif, set uji `T` dikatakan memadai jika mencakup semua aspek perhitungan aktual yang dilakukan oleh program dan semua perhitungan yang dimaksudkan oleh spesifikasinya.Dua metode praktis untuk mengevaluasi kecukupan tes adalah sebagai berikut:
+* **Fault Seeding**: Metode ini mengacu pada menanamkan sejumlah kesalahan dalam program `P` dan mengeksekusi `P` dengan set tes `T`. Jika `T` mengungkapkan k persen dari kesalahan yang ditanamkan, kami berasumsi bahwa `T` hanya mengungkapkan k persen dari kesalahan asli. Jika 100% dari kesalahan yang ditanamkan telah diungkapkan oleh `T`, kami merasa lebih percaya diri tentang kecukupan `T`.Diskusi menyeluruh tentang penyemaian kesalahan dapat ditemukan di Bab 13.
+* **Program Mutation**: Diberikan program `P`, mutasi adalah program yang diperoleh dengan membuat perubahan kecil ke `P`. Dalam metode mutasi program, serangkaian mutasi diperoleh dari `P`.Beberapa mutasi mungkin mengandung kesalahan dan sisanya setara dengan `P`. Tes `T` dikatakan memadai jika menyebabkan setiap mutasi yang salah menghasilkan hasil yang tidak terduga.Diskusi yang lebih menyeluruh tentang mutasi program dapat ditemukan di Bab 3.
 
 ## 2.6 KETERBATASAN PENGUJIAN
-Idealnya, semua program harus benar, yaitu, tidak ada kesalahan dalam suatu program.Karena sifat tidak praktis dari membuktikan bahwa program kecil menjadi benar, pelanggan dan pengembang perangkat lunak bergantung pada kemanjuran pengujian. Di bagian ini, kami memperkenalkan dua batasan utama pengujian:
+Idealnya, semua program harus benar, yaitu, tidak ada kesalahan dalam suatu program. Karena sifat tidak praktis dari membuktikan bahwa program kecil menjadi benar, pelanggan dan pengembang perangkat lunak bergantung pada kemanjuran pengujian. Di bagian ini, kami memperkenalkan dua batasan utama pengujian:
 * Pengujian berarti melaksanakan program dengan subset yang umumnya kecil dan tepat dari domain input program.Subset kecil yang tepat dari domain input dipilih karena biaya mungkin tidak memungkinkan subset yang jauh lebih besar dipilih, apalagi set input penuh. Pengujian dengan set input penuh dikenal sebagai pengujian lengkap. Dengan demikian, kebutuhan yang melekat untuk menguji program dengan sebagian kecil dari domain input menimbulkan batas mendasar pada kemanjuran pengujian. Batasnya adalah dalam bentuk ketidakmampuan kita untuk mengekstrapolasi kebenaran hasil untuk subset yang tepat dari domain input untuk memprogram kebenaran.Dengan kata lain, bahkan jika suatu program lulus satu set `T` uji, kami tidak dapat menyimpulkan bahwa program tersebut benar.
 * Setelah kami memilih subset dari domain input, kami dihadapkan dengan masalah memverifikasi kebenaran output program untuk input tes individu.Artinya, output program diperiksa untuk menentukan apakah program dilakukan dengan benar pada input tes. **Mekanisme yang memverifikasi kebenaran output program dikenal sebagai _oracle_.** Konsep _oracle_ dibahas secara rinci dalam Bab 9. Menentukan kebenaran output program bukanlah tugas yang sepele. Jika salah satu dari dua kondisi berikut berlaku, suatu program dianggap _tidak dapat diuji_ (_nontestable_):
 - Tidak ada _oracle_.
