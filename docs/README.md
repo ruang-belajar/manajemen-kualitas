@@ -1,14 +1,19 @@
 # Manajemen Kualitas Sistem Informasi
+
+## Buku
+### 📘 Software Testing And Quality Insurance - Theory and Practice
 1. [Konsep Dasar dan Pendahuluan](konsep-dasar.md)
 2. [Teori dalam Pengujian Program](teori-program-testing.md)
 
 ## Catatan
 1. [Terminologi Penting](terminologi.md)
+2. [Menggunakan Playwight _Automated Testing_](playwright.md)
 
 ## Test Site
 1. [Swag Labs](https://www.saucedemo.com/)
 2. [XYZ Bank](https://www.globalsqa.com/angularJs-protractor/BankingProject/)
 3. [TOOLSHOP DEMO](https://practicesoftwaretesting.com/)
+    - [Github:playwrightsolutions/playwright-practicesotwaretesting.com](https://github.com/playwrightsolutions/playwright-practicesoftwaretesting.com)
 
 ## Referensi
 - [Paul C. Jorgensen, Software Testing A Craftsman's Approach](https://drive.google.com/file/d/1YdpXVM2NhpqzhpYv3gWyvjuBxTqUL2KH/view?usp=sharing)
