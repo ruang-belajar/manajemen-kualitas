@@ -6,3 +6,11 @@
 - BAT
 - Mutation Testing
 - Debugging
+- Black-box testing
+- White-box testig
+- Regression Testing
+- Unit Testing
+- Test Case
+- Oracle
+- Robustness Test
+- Performance Test
