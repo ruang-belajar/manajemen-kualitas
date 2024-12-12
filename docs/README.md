@@ -14,6 +14,9 @@
 2. [XYZ Bank](https://www.globalsqa.com/angularJs-protractor/BankingProject/)
 3. [TOOLSHOP DEMO](https://practicesoftwaretesting.com/)
     - [Github:playwrightsolutions/playwright-practicesotwaretesting.com](https://github.com/playwrightsolutions/playwright-practicesoftwaretesting.com)
+4. [QA Practice](https://qa-practice.netlify.app/)
+    - [Shop](https://qa-practice.netlify.app/auth_ecommerce)
+    - [CHALLENGE - Spot the BUGS!](https://qa-practice.netlify.app/bugs-form)
 
 ## Referensi
 - [Paul C. Jorgensen, Software Testing A Craftsman's Approach](https://drive.google.com/file/d/1YdpXVM2NhpqzhpYv3gWyvjuBxTqUL2KH/view?usp=sharing)
@@ -22,4 +25,5 @@
 - [Lawrence Bernstein, Software Testing - Concepts and Operations](https://drive.google.com/file/d/1t5-BlKTcESKV83V0uv64ju3gKBOEBH2F/view?usp=sharing)
 - [Software Testing and Quality Assurance](https://drive.google.com/file/d/1UBdGl16MTPAFDFITc5Os8M84x9qIf3mI/view?usp=sharing)
 - [7 Principles of Software Testing with Examples](https://www.guru99.com/software-testing-seven-principles.html)
+- [V Model Software Testing](https://www.guru99.com/v-model-software-testing.html)
 - [What Is Software Testing? 100+ Free Manual Testing Tutorials](https://www.softwaretestinghelp.com/manual-testing-tutorial-1/)
