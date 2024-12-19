@@ -4,10 +4,13 @@
 ### 📘 Software Testing And Quality Insurance - Theory and Practice
 1. [Konsep Dasar dan Pendahuluan](konsep-dasar.md)
 2. [Teori dalam Pengujian Program](teori-program-testing.md)
+7. [Integrasi Sistem](system-integration.md)
+8. [Pengujian Sistem](system-test-categories.md)
 
 ## Catatan
-1. [Terminologi Penting](terminologi.md)
-2. [Menggunakan Playwight _Automated Testing_](playwright.md)
+1. [📝 Catatan Pertemuan](catatan-2024.md)
+2. [Terminologi Penting](terminologi.md)
+3. [Menggunakan Playwight _Automated Testing_](playwright.md)
 
 ## Test Site
 1. [Swag Labs](https://www.saucedemo.com/)
@@ -27,3 +30,4 @@
 - [7 Principles of Software Testing with Examples](https://www.guru99.com/software-testing-seven-principles.html)
 - [V Model Software Testing](https://www.guru99.com/v-model-software-testing.html)
 - [What Is Software Testing? 100+ Free Manual Testing Tutorials](https://www.softwaretestinghelp.com/manual-testing-tutorial-1/)
+- [Software Testing - An ISTQB-BCS Certified Tester Foundation Guide 3rd ed-BCS Learning & Development Limited (2015)](https://drive.google.com/file/d/1ZQ2hNqhu0oiLfNcSzEteOkB_XBL88FdS/view?usp=sharing)
