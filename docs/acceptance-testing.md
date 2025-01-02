@@ -1,7 +1,7 @@
 <style>
     s { text-decoration:none; background-color: yellow; }
 </style>
-# ACCEPTANCE CRITERIA
+# ACCEPTANCE TESTING
 
 > Acceptance of others, their looks, their behaviors, their beliefs, bring you an inner peace and tranquility—instead of anger and resentment. — Anonymous
 
@@ -253,3 +253,62 @@ Bab ini dimulai dengan pengantar dua jenis pengujian penerimaan: pengujian pener
 Kami menyajikan garis besar rencana pengujian penerimaan dan menjelaskan secara rinci cara membuat rencana tersebut. Penekanan harus diberikan pada gagasan bahwa sistem bekerja sesuai dengan harapan klien dalam mengembangkan rencana pengujian penerimaan, daripada hanya lulus pengujian komprehensif. Penekanan yang lebih kecil diberikan pada sistem yang lulus serangkaian pengujian komprehensif karena pengujian yang ketat diasumsikan telah terjadi selama fase pengujian sistem.
 
 Selanjutnya, kami membahas pelaksanaan pengujian penerimaan, yang merupakan aktivitas penting yang dilakukan oleh klien dengan dukungan yang sangat dibutuhkan dari pengembang. Tiga aktivitas utama diidentifikasi dan dibahas: (i) memberikan pelatihan kepada teknisi pengujian klien, (ii) memperbaiki masalah selama pengujian penerimaan, dan (iii) menyelesaikan masalah yang berkaitan dengan setiap ketidaksesuaian yang terkait dengan kriteria penerimaan. Setelah itu, kami menjelaskan pembuatan laporan uji penerimaan, yang harus diselesaikan di akhir pengujian penerimaan. Akhirnya, kami menjelaskan bagaimana cerita pengguna digunakan dalam XP sebagai kriteria penerimaan dan kasus uji penerimaan dibuat. Pengujian ini ditinjau, diotomatisasi, dan dijalankan beberapa kali per hari sebagai rangkaian uji penerimaan regresi di hadapan klien di lokasi.
+
+===
+
+# Types of Acceptance Testing (2)
+
+source: https://www.geeksforgeeks.org/acceptance-testing-software-testing/
+
+![](images/gambar14-1.webp)
+
+## 1. User Acceptance Testing (UAT)
+- User acceptance testing is used to determine whether the product is working for the user correctly.
+- Specific requirements which are quite often used by the customers are primarily picked for testing purposes. This is also termed as End-User Testing.
+
+## 2. Business Acceptance Testing (BAT)
+- BAT is used to determine whether the product meets the business goals and purposes or not.
+- BAT mainly focuses on business profits which are quite challenging due to the changing market conditions and new technologies, so the current implementation may have to being changed which results in extra budgets.
+
+## 3. Contract Acceptance Testing (CAT)
+- CAT is a contract that specifies that once the product goes live, within a predetermined period, the acceptance test must be performed, and it should pass all the acceptance use cases.
+- Here is a contract termed a Service Level Agreement (SLA), which includes the terms where the payment will be made only if the Product services are in-line with all the requirements, which means the contract is fulfilled.
+- Sometimes, this contract happens before the product goes live.
+- There should be a well-defined contract in terms of the period of testing, areas of testing, conditions on issues encountered at later stages, payments, etc.
+
+## 4. Regulations Acceptance Testing (RAT)
+RAT is used to determine whether the product violates the rules and regulations that are defined by the government of the country where it is being released.
+This may be unintentional but will impact negatively on the business. Generally, the product or application that is to be released in the market, has to go under RAT, as different countries or regions have different rules and regulations defined by its governing bodies.
+If any rules and regulations are violated for any country then that country or the specific region then the product will not be released in that country or region.
+If the product is released even though there is a violation then only the vendors of the product will be directly responsible.
+
+## 5. Operational Acceptance Testing (OAT)
+OAT is used to determine the operational readiness of the product and is non-functional testing.
+It mainly includes testing of recovery, compatibility, maintainability, reliability, etc. OAT assures the stability of the product before it is released to production.
+
+## 6. Alpha Testing
+Alpha testing is used to determine the product in the development testing environment by a specialized testers team usually called alpha testers.
+
+## 7. Beta Testing
+- Beta testing is used to assess the product by exposing it to the real end-users, typically called beta testers in their environment.
+- Feedback is collected from the users and the defects are fixed. Also, this helps in enhancing the product to give a rich user experience.
+
+## Use of Acceptance Testing
+To find the defects missed during the functional testing phase.
+1. How well the product is developed.
+2. A product is what actually the customers need.
+3. Feedback help in improving the product performance and user experience.
+4. Minimize or eliminate the issues arising from the production.
+
+## Advantages of Acceptance Testing
+1. This testing helps the project team to know the further requirements from the users directly as it involves the users for testing.
+2. Automated test execution.
+3. It brings confidence and satisfaction to the clients as they are directly involved in the testing process.
+4. It is easier for the user to describe their requirement.
+5. It covers only the Black-Box testing process and hence the entire functionality of the product will be tested.
+
+## Disadvantages of Acceptance Testing
+1. Users should have basic knowledge about the product or application.
+2. Sometimes, users don’t want to participate in the testing process.
+3. The feedback for the testing takes a long time as it involves many users and the opinions may differ from one user to another user.
+4. Development team is not participated in this testing process.
