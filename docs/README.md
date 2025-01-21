@@ -20,6 +20,10 @@
 4. [QA Practice](https://qa-practice.netlify.app/)
     - [Shop](https://qa-practice.netlify.app/auth_ecommerce)
     - [CHALLENGE - Spot the BUGS!](https://qa-practice.netlify.app/bugs-form)
+5. [AcademyBugs](https://academybugs.com/)
+6. [BugEater](https://bugeater.web.app/app/list)
+7. [Automation Exercise](https://www.automationexercise.com/test_cases)
+
 
 ## Referensi
 - [Paul C. Jorgensen, Software Testing A Craftsman's Approach](https://drive.google.com/file/d/1YdpXVM2NhpqzhpYv3gWyvjuBxTqUL2KH/view?usp=sharing)
