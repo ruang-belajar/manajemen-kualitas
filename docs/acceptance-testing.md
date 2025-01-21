@@ -228,11 +228,11 @@ Aktivitas uji penerimaan dirancang untuk mencapai satu dari tiga kesimpulan: Men
 * Keputusan dibuat tentang kelanjutan pengujian penerimaan jika hasil dari fase pertama pengujian penerimaan tidak menjanjikan. Kita mungkin ingat bahwa pengujian dasar dilakukan pada fase pertama.
 * Jika hasil pengujian tidak memuaskan, perubahan akan dilakukan pada sistem sebelum pengujian penerimaan dapat dilanjutkan ke fase berikutnya.
 
-Keputusan sementara dibuat berdasarkan evaluasi hasil dari fase pertama pengujian. Selain itu, selama pelaksanaan pengujian penerimaan, status pengujian ditinjau pada akhir setiap hari kerja oleh pemimpin tim pengujian penerimaan, teknisi pengujian sistem di lokasi, dan manajer proyek klien dan pemasok. Tim penerimaan menyiapkan laporan pengujian yang menjadi dasar diskusi pada rapat tinjauan sebelum mereka bertemu untuk meninjau. Templat laporan pengujian diberikan dalam Tabel 14.3.
+Keputusan sementara dibuat berdasarkan evaluasi hasil dari fase pertama pengujian. Selain itu, selama pelaksanaan pengujian penerimaan, status pengujian ditinjau pada akhir setiap hari kerja oleh pemimpin tim pengujian penerimaan, teknisi pengujian sistem di lokasi, dan manajer proyek klien dan pemasok. Tim penerimaan menyiapkan laporan pengujian yang menjadi dasar diskusi pada rapat tinjauan sebelum mereka bertemu untuk meninjau. Template laporan pengujian diberikan dalam Tabel 14.3.
 
 Laporan pengujian ditinjau setiap hari untuk memahami status dan kemajuan pengujian penerimaan. Jika masalah serius ditemukan selama pengujian penerimaan, manajer proyek melaporkan masalah tersebut kepada manajemen senior.
 
-Di akhir fase pertama dan kedua pengujian penerimaan, laporan pengujian penerimaan dibuat oleh ketua tim pengujian. Templat untuk laporan pengujian diuraikan dalam Tabel 14.4. Sebagian besar informasi dari laporan status pengujian dapat digunakan dalam laporan ringkasan pengujian penerimaan.
+Di akhir fase pertama dan kedua pengujian penerimaan, laporan pengujian penerimaan dibuat oleh ketua tim pengujian. Template untuk laporan pengujian diuraikan dalam Tabel 14.4. Sebagian besar informasi dari laporan status pengujian dapat digunakan dalam laporan ringkasan pengujian penerimaan.
 
 Pengidentifikasi laporan mengidentifikasi laporan secara unik. Pengidentifikasi ini digunakan untuk melacak dokumen dalam kontrol versi.
 

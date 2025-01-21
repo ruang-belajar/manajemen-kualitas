@@ -20,7 +20,7 @@
 4. [QA Practice](https://qa-practice.netlify.app/)
     - [Shop](https://qa-practice.netlify.app/auth_ecommerce)
     - [CHALLENGE - Spot the BUGS!](https://qa-practice.netlify.app/bugs-form)
-5. [AcaemyBugs](https://academybugs.com/)
+5. [AcademyBugs](https://academybugs.com/)
 6. [BugEater](https://bugeater.web.app/app/list)
 7. [Automation Exercise](https://www.automationexercise.com/test_cases)
 
