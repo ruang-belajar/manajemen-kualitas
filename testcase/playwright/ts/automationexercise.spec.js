@@ -1,10 +1,15 @@
 import { test, expect } from '@playwright/test';
+import * as crypto from "node:crypto";
 
 // run:
-// npx playwright test automationexercise.spec.ts --project='chromium'
+// npx playwright test automationexercise.spec.ts --project=chromium -ui
 
 test('automation exercise 1', async ({ page }) => {
-    const email = 'afawerw@dsdsfawera.com';
+    // generate random domain untuk email
+    const domain = crypto.randomBytes(20).toString('hex');
+
+    // init data yang akan di test
+    const email = 'afawerw@'+domain+'.com';
     const password = 'budirewkqrwe';
     const name = 'budi';
     const firstname = "budi";
