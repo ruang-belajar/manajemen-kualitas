@@ -6,11 +6,13 @@
 2. [Teori dalam Pengujian Program](teori-program-testing.md)
 7. [Integrasi Sistem](system-integration.md)
 8. [Pengujian Sistem](system-test-categories.md)
+14. [Acceptance Testing](acceptance-testing.md)
 
 ## Catatan
 1. [📝 Catatan Pertemuan](catatan-2024.md)
 2. [Terminologi Penting](terminologi.md)
 3. [Menggunakan Playwight _Automated Testing_](playwright.md)
+4. [7 Principles of Software Testing](7-principles.md)
 
 ## Test Site
 1. [Swag Labs](https://www.saucedemo.com/)

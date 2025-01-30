@@ -14,3 +14,5 @@
 - Oracle
 - Robustness Test
 - Performance Test
+
+- 7 Principles of Software Testing
