@@ -11,8 +11,8 @@
 - Regression Testing
 - Unit Testing
 - Test Case
-- Oracle
 - Robustness Test
 - Performance Test
 
 - 7 Principles of Software Testing
+- Automation testing
